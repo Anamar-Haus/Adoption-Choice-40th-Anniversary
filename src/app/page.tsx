@@ -231,13 +231,13 @@ export default function HomePage() {
 
         {/* Watermark logo */}
         <div
-          className="absolute opacity-5 w-150 h-150 pointer-events-none"
+          className="select-none absolute opacity-5 w-150 h-150 pointer-events-none"
           style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}
         >
           <Image src="/logo-notext.svg" alt="" fill className="object-contain" />
         </div>
 
-        <div className="text-center px-4 relative z-10 max-w-4xl mx-auto">
+        <div className="select-none text-center px-4 relative z-10 max-w-4xl mx-auto">
           {/* Main heading */}
           <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-foreground">
             Building Families Since 1986

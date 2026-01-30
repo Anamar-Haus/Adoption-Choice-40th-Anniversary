@@ -241,12 +241,12 @@ function MediaPanel({ item, index }: MediaPanelProps) {
       {item.media ? (
         item.media
       ) : item.mediaSrc ? (
-        <div className="relative w-full h-[70vh]">
+        <div className="relative w-full aspect-video">
           <Image
             src={item.mediaSrc}
             alt={item.title}
             fill
-            className="object-contain rounded-2xl shadow-2xl"
+            className="object-cover rounded-2xl shadow-2xl"
           />
         </div>
       ) : null}
@@ -422,7 +422,7 @@ function MobileStepCard({ item, index, reducedMotion }: MobileStepCardProps) {
           {item.media ? (
             item.media
           ) : item.mediaSrc ? (
-            <div className="relative w-full h-64">
+            <div className="relative w-full aspect-video">
               <Image
                 src={item.mediaSrc}
                 alt={item.title}

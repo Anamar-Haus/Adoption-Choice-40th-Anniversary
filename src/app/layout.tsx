@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { Comfortaa, Geist_Mono } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 const comfortaa = Comfortaa({
@@ -24,7 +25,15 @@ export const metadata: Metadata = {
   },
   description:
     'Celebrating nearly 40 years of building loving families through adoption in Wisconsin. Adoption Choice, Inc. is a fully licensed non-profit adoption agency serving all 72 Wisconsin counties.',
-  keywords: ['Adoption', 'Wisconsin', 'Adoption Agency', 'Non-Profit', 'Family', 'Birth Parents', 'Adoptive Families'],
+  keywords: [
+    'Adoption',
+    'Wisconsin',
+    'Adoption Agency',
+    'Non-Profit',
+    'Family',
+    'Birth Parents',
+    'Adoptive Families',
+  ],
 
   // Canonical URL placeholder - update with your domain
   metadataBase: new URL(siteUrl),
@@ -84,6 +93,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${comfortaa.variable} ${geistMono.variable} antialiased font-comfortaa`}>
         {children}
+        <Analytics />
       </body>
     </html>
   )
