@@ -1,0 +1,49 @@
+# Docker Compose for Next.js SEO Toolkit
+# Provides local development database services
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:16-alpine
+    container_name: seo-toolkit-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: seo_toolkit
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d seo_toolkit"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  # pgAdmin - Database Management UI (Optional)
+  # Access at http://localhost:5050
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: seo-toolkit-pgadmin
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+    ports:
+      - "5050:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    depends_on:
+      postgres:
+        condition: service_healthy
+    profiles:
+      - tools  # Only starts when explicitly requested with --profile tools
+
+volumes:
+  postgres_data:
+    name: seo-toolkit-postgres-data
+  pgadmin_data:
+    name: seo-toolkit-pgadmin-data
