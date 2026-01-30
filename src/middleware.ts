@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
 import { generateRequestId } from '@/lib/logger'
 import { applySecurityHeaders } from '@/lib/security/headers'
 
@@ -13,20 +12,20 @@ import { applySecurityHeaders } from '@/lib/security/headers'
  * Security Note: All cross-cutting security concerns should be handled here
  * to ensure consistent application across all routes
  */
-export function middleware(_request: NextRequest) {
-    // Generate unique request ID for tracing
-    const requestId = generateRequestId()
+export function middleware() {
+  // Generate unique request ID for tracing
+  const requestId = generateRequestId()
 
-    // Create response and continue to the next handler
-    const response = NextResponse.next()
+  // Create response and continue to the next handler
+  const response = NextResponse.next()
 
-    // Add request ID to response headers
-    response.headers.set('X-Request-ID', requestId)
+  // Add request ID to response headers
+  response.headers.set('X-Request-ID', requestId)
 
-    // Apply security headers
-    applySecurityHeaders(response)
+  // Apply security headers
+  applySecurityHeaders(response)
 
-    return response
+  return response
 }
 
 /**
@@ -38,14 +37,14 @@ export function middleware(_request: NextRequest) {
  * - Favicon
  */
 export const config = {
-    matcher: [
-        /*
-         * Match all request paths except for the ones starting with:
-         * - _next/static (static files)
-         * - _next/image (image optimization files)
-         * - favicon.ico (favicon file)
-         * - public folder files
-         */
-        '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
-    ],
+  matcher: [
+    /*
+     * Match all request paths except for the ones starting with:
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico (favicon file)
+     * - public folder files
+     */
+    '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
+  ],
 }

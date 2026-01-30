@@ -9,6 +9,7 @@ import {
   useSyncExternalStore,
 } from 'react'
 import { motion, useScroll, useTransform, useReducedMotion, type MotionValue } from 'motion/react'
+import Image from 'next/image'
 
 /* ─────────────────────────────────────────────────────────────────────────────
    TYPES
@@ -240,11 +241,14 @@ function MediaPanel({ item, index }: MediaPanelProps) {
       {item.media ? (
         item.media
       ) : item.mediaSrc ? (
-        <img
-          src={item.mediaSrc}
-          alt={item.title}
-          className="w-full h-auto max-h-[70vh] object-contain rounded-2xl shadow-2xl"
-        />
+        <div className="relative w-full h-[70vh]">
+          <Image
+            src={item.mediaSrc}
+            alt={item.title}
+            fill
+            className="object-contain rounded-2xl shadow-2xl"
+          />
+        </div>
       ) : null}
     </motion.div>
   )
@@ -323,7 +327,7 @@ function StickyProgressIndicator({ railPosition, leftOffset }: StickyProgressInd
           className="absolute w-32 h-32 -translate-x-1/2 -translate-y-1/2 rounded-full p-2"
           style={{ backgroundColor: '#f5f5f4', top: logoTop }}
         >
-          <img src="/logo-notext.svg" alt="Progress indicator" className="w-full h-full" />
+          <Image src="/logo-notext.svg" alt="Progress indicator" fill className="object-contain" />
         </motion.div>
       </div>
     </div>
@@ -418,11 +422,14 @@ function MobileStepCard({ item, index, reducedMotion }: MobileStepCardProps) {
           {item.media ? (
             item.media
           ) : item.mediaSrc ? (
-            <img
-              src={item.mediaSrc}
-              alt={item.title}
-              className="w-full h-auto rounded-xl shadow-lg"
-            />
+            <div className="relative w-full h-64">
+              <Image
+                src={item.mediaSrc}
+                alt={item.title}
+                fill
+                className="object-cover rounded-xl shadow-lg"
+              />
+            </div>
           ) : null}
         </div>
       )}

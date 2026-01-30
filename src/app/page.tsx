@@ -1,5 +1,6 @@
 import { ScrollTimeline, type TimelineItem } from '@/components/timeline'
 import { ChevronDown } from 'lucide-react'
+import Image from 'next/image'
 
 const items: TimelineItem[] = [
   {
@@ -189,16 +190,24 @@ export default function HomePage() {
       {/* Hero section */}
       <section className="h-screen flex items-center justify-center relative">
         <div className="text-center px-4">
-          <a href="https://www.adoptionchoiceinc.org" target="_blank" rel="noopener noreferrer">
-            <img
+          <a
+            href="https://www.adoptionchoiceinc.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-48 lg:w-64 h-auto mx-auto mb-8 hover:opacity-80 transition-opacity"
+          >
+            <Image
               src="/logo.svg"
               alt="Adoption Choice Inc."
-              className="w-48 lg:w-64 h-auto mx-auto mb-8 hover:opacity-80 transition-opacity"
+              width={256}
+              height={256}
+              className="w-full h-auto"
+              priority
             />
           </a>
           <h1 className="text-5xl lg:text-7xl font-bold mb-4 text-foreground">Our History</h1>
           <p className="text-xl text-muted-foreground mb-12 max-w-lg mx-auto">
-            Nearly 40 years of connecting families through adoption in Wisconsin
+            40 years of connecting families through adoption in Wisconsin
           </p>
           <div className="animate-bounce">
             <ChevronDown className="w-8 h-8 mx-auto text-muted-foreground" />
@@ -221,12 +230,12 @@ export default function HomePage() {
         />
 
         {/* Watermark logo */}
-        <img
-          src="/logo-notext.svg"
-          alt=""
-          className="absolute opacity-5 w-[600px] h-[600px] pointer-events-none"
+        <div
+          className="absolute opacity-5 w-150 h-150 pointer-events-none"
           style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}
-        />
+        >
+          <Image src="/logo-notext.svg" alt="" fill className="object-contain" />
+        </div>
 
         <div className="text-center px-4 relative z-10 max-w-4xl mx-auto">
           {/* Main heading */}
