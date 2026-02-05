@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from 'next'
 import { Comfortaa, Geist_Mono } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import UmamiScript from 'umami-script-nextjs';
 
@@ -92,10 +91,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <UmamiScript />
+
       <body className={`${comfortaa.variable} ${geistMono.variable} antialiased font-comfortaa`}>
         {children}
-        <Analytics />
+        <UmamiScript />
       </body>
     </html>
   )
