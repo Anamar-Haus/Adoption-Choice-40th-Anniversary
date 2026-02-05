@@ -94,7 +94,7 @@ export default function RootLayout({
 
       <body className={`${comfortaa.variable} ${geistMono.variable} antialiased font-comfortaa`}>
         {children}
-        <UmamiScript />
+        <UmamiScript websiteId='f93372c8-76dd-4d6e-a683-3a735e6e965a' scriptSrc='https://cloud.umami.is/script.js' />
       </body>
     </html>
   )
