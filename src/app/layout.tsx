@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Comfortaa, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
-import Script from 'next/script'
+import UmamiScript from 'umami-script-nextjs';
 
 const comfortaa = Comfortaa({
   variable: '--font-comfortaa',
@@ -92,7 +92,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <Script defer src="https://cloud.umami.is/script.js" data-website-id="f93372c8-76dd-4d6e-a683-3a735e6e965a"></Script>
+      <UmamiScript />
       <body className={`${comfortaa.variable} ${geistMono.variable} antialiased font-comfortaa`}>
         {children}
         <Analytics />
