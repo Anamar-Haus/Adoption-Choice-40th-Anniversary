@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Comfortaa, Geist_Mono } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
-import UmamiScript from 'umami-script-nextjs';
 
 const comfortaa = Comfortaa({
   variable: '--font-comfortaa',
@@ -91,10 +91,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-
       <body className={`${comfortaa.variable} ${geistMono.variable} antialiased font-comfortaa`}>
+        <Script
+          src="https://cloud.umami.is/script.js"
+          data-website-id="f93372c8-76dd-4d6e-a683-3a735e6e965a"
+          strategy="afterInteractive"
+        />
         {children}
-        <UmamiScript websiteId='f93372c8-76dd-4d6e-a683-3a735e6e965a' scriptSrc='https://cloud.umami.is/script.js' />
       </body>
     </html>
   )
