@@ -191,9 +191,10 @@ export default function HomePage() {
   return (
     <>
       <Script
-        id="fuckyourmomanddadandyourdogtoobitchassmotherfuckerandyourcattoo"
+        id="umami-analytics"
         src="https://cloud.umami.is/script.js"
         data-website-id="f93372c8-76dd-4d6e-a683-3a735e6e965a"
+        data-domains="adoption-choice-40th-anniversary.vercel.app,localhost"
         strategy="afterInteractive"
       />
       <main className="min-h-screen" style={{ backgroundColor: '#f5f5f4' }}>
