@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 // SEO-friendly metadata defaults using Next.js metadata API
 // Update these values with your actual site information
-const siteUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://adoption-choice-40th-anniversary.vercel.app/'
+const siteUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://adoption-choice-40th-anniversary.vercel.app'
 
 export const metadata: Metadata = {
   // Basic metadata
