@@ -24,16 +24,16 @@ export function generateCSP(): string {
     const directives = [
         // Default to self only
         "default-src 'self'",
-        // Scripts: self + inline for Next.js
-        "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
+        // Scripts: self + inline for Next.js + Umami analytics
+        "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cloud.umami.is",
         // Styles: self + inline for styled-components/CSS-in-JS
         "style-src 'self' 'unsafe-inline'",
         // Images: self, data URIs, and HTTPS
         "img-src 'self' data: https:",
         // Fonts: self and data URIs
         "font-src 'self' data:",
-        // Connect: self for API calls
-        "connect-src 'self'",
+        // Connect: self for API calls + Umami analytics
+        "connect-src 'self' https://cloud.umami.is",
         // Frames: none (clickjacking protection)
         "frame-ancestors 'none'",
         // Form actions: self only
