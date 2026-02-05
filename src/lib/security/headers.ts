@@ -34,8 +34,8 @@ export function generateCSP(): string {
         "font-src 'self' data:",
         // Connect: self for API calls + Umami analytics
         "connect-src 'self' https://*.umami.is",
-        // Frames: none (clickjacking protection)
-        "frame-ancestors 'none'",
+        // Frames: allow embedding on adoptionchoiceinc.org
+        "frame-ancestors 'self' https://adoptionchoiceinc.org https://www.adoptionchoiceinc.org",
         // Form actions: self only
         "form-action 'self'",
         // Base URI: self only
@@ -64,9 +64,8 @@ export function applySecurityHeaders(response: NextResponse): void {
         response.headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains')
     }
 
-    // Clickjacking Protection
-    // X-Frame-Options is deprecated but still supported by older browsers
-    response.headers.set('X-Frame-Options', 'DENY')
+    // Note: X-Frame-Options removed - using CSP frame-ancestors instead
+    // which supports multiple allowed origins
 
     // MIME Type Sniffing Protection
     // Prevents browsers from interpreting files as a different MIME type
@@ -99,7 +98,6 @@ export function getSecurityHeaders(): Record<string, string> {
 
     const headers: Record<string, string> = {
         'Content-Security-Policy': generateCSP(),
-        'X-Frame-Options': 'DENY',
         'X-Content-Type-Options': 'nosniff',
         'Referrer-Policy': 'strict-origin-when-cross-origin',
         'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), payment=()',
