@@ -189,220 +189,220 @@ const items: TimelineItem[] = [
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen" style={{ backgroundColor: '#f5f5f4' }}>
+    <>
       <Script
         src="https://cloud.umami.is/script.js"
         data-website-id="f93372c8-76dd-4d6e-a683-3a735e6e965a"
         strategy="afterInteractive"
-        onLoad={() => alert("hi")}
-        onError={() => alert("bye")}
       />
-      {/* 40th Anniversary Logo Section */}
+      <main className="min-h-screen" style={{ backgroundColor: '#f5f5f4' }}>
 
-      <section className="w-full max-w-7xl mx-auto px-6 py-16 relative overflow-hidden">
-        {/* Background watermark logos */}
-        <div
-          className="absolute pointer-events-none select-none opacity-[0.04] w-[350px] h-[350px]"
-          style={{ top: '50%', left: '55%' }}
-        >
-          <Image src="/logo-notext.svg" alt="" fill className="object-contain" aria-hidden="true" />
-        </div>
-        <div
-          className="absolute pointer-events-none select-none opacity-[0.04] w-[500px] h-[500px]"
-          style={{ bottom: '10%', right: '60%' }}
-        >
-          <Image src="/logo-notext.svg" alt="" fill className="object-contain" aria-hidden="true" />
-        </div>
+        {/* 40th Anniversary Logo Section */}
 
-        {/* Mobile logo */}
-        <Image
-          src="/40-logo-short.svg"
-          alt="Celebrating 40 Years"
-          width={800}
-          height={400}
-          className="w-full h-auto relative z-10 md:hidden"
-        />
-        {/* Desktop logo */}
-        <Image
-          src="/40-logo.svg"
-          alt="Celebrating 40 Years"
-          width={1920}
-          height={400}
-          className="w-full h-auto relative z-10 hidden md:block"
-        />
+        <section className="w-full max-w-7xl mx-auto px-6 py-16 relative overflow-hidden">
+          {/* Background watermark logos */}
+          <div
+            className="absolute pointer-events-none select-none opacity-[0.04] w-[350px] h-[350px]"
+            style={{ top: '50%', left: '55%' }}
+          >
+            <Image src="/logo-notext.svg" alt="" fill className="object-contain" aria-hidden="true" />
+          </div>
+          <div
+            className="absolute pointer-events-none select-none opacity-[0.04] w-[500px] h-[500px]"
+            style={{ bottom: '10%', right: '60%' }}
+          >
+            <Image src="/logo-notext.svg" alt="" fill className="object-contain" aria-hidden="true" />
+          </div>
 
-        {/* Tagline */}
-        <p className="text-center md:text-4xl text-2xl  text-[#789051]/60 mt-16 mb-16 tracking-wide font-bold">
-          Hope. Heart. Home.
-        </p>
+          {/* Mobile logo */}
+          <Image
+            src="/40-logo-short.svg"
+            alt="Celebrating 40 Years"
+            width={800}
+            height={400}
+            className="w-full h-auto relative z-10 md:hidden"
+          />
+          {/* Desktop logo */}
+          <Image
+            src="/40-logo.svg"
+            alt="Celebrating 40 Years"
+            width={1920}
+            height={400}
+            className="w-full h-auto relative z-10 hidden md:block"
+          />
 
-        {/* Staggered fade-in text sections */}
-        <div className="space-y-24 max-w-4xl mx-auto">
-          <FadeInText>
-            <p className="text-2xl text-black leading-relaxed text-center">
-              For 40 years, Adoption Choice, Inc. has walked alongside children, birth parents, and adoptive families with one purpose: building loving families through adoption.
-            </p>
-          </FadeInText>
+          {/* Tagline */}
+          <p className="text-center md:text-4xl text-2xl  text-[#789051]/60 mt-16 mb-16 tracking-wide font-bold">
+            Hope. Heart. Home.
+          </p>
 
-          <FadeInText>
-            <p className="text-2xl text-black leading-relaxed text-center">
-              As adoption counselors, social workers, and advocates, we have seen how hope takes root, how heart carries families through uncertainty, and how home becomes more than a place. It becomes a promise.
-            </p>
-          </FadeInText>
-
-          <FadeInText>
-            <p className="text-2xl text-black leading-relaxed text-center">
-              This year, we are honoring our 40th anniversary by celebrating 40 years of adoption through 40 meaningful highlights, each one reflecting the care, trust, and community behind every adoption journey.
-            </p>
-          </FadeInText>
-
-          <FadeInText>
-            <p className="text-2xl text-black leading-relaxed text-center">
-              To honor our 40th year, we are inviting our community to help us reach one shared goal:
-            </p>
-          </FadeInText>
-
-          <FadeInText>
-            <p className="text-2xl text-black leading-relaxed text-center font-semibold">
-              40 new donors supporting the next generation of adoption journeys.
-            </p>
-          </FadeInText>
-
-          <FadeInText>
-            <div className="text-center bg-white rounded-2xl shadow-2xl p-8 md:p-12 border-2" style={{ borderColor: '#789051' }}>
-              <p className="text-3xl text-[#a32d84] leading-relaxed mb-8 font-extrabold">
-                Your Donation Directly Supports:
+          {/* Staggered fade-in text sections */}
+          <div className="space-y-24 max-w-4xl mx-auto">
+            <FadeInText>
+              <p className="text-2xl text-black leading-relaxed text-center">
+                For 40 years, Adoption Choice, Inc. has walked alongside children, birth parents, and adoptive families with one purpose: building loving families through adoption.
               </p>
-              <ul className="text-base md:text-xl text-black leading-relaxed space-y-3">
-                <li>Adoption counseling and education</li>
-                <li>Ethical adoption services focused on child wellbeing</li>
-                <li>Birth parent support and resources</li>
-                <li>Pre- and post-adoption guidance for families</li>
-              </ul>
+            </FadeInText>
+
+            <FadeInText>
+              <p className="text-2xl text-black leading-relaxed text-center">
+                As adoption counselors, social workers, and advocates, we have seen how hope takes root, how heart carries families through uncertainty, and how home becomes more than a place. It becomes a promise.
+              </p>
+            </FadeInText>
+
+            <FadeInText>
+              <p className="text-2xl text-black leading-relaxed text-center">
+                This year, we are honoring our 40th anniversary by celebrating 40 years of adoption through 40 meaningful highlights, each one reflecting the care, trust, and community behind every adoption journey.
+              </p>
+            </FadeInText>
+
+            <FadeInText>
+              <p className="text-2xl text-black leading-relaxed text-center">
+                To honor our 40th year, we are inviting our community to help us reach one shared goal:
+              </p>
+            </FadeInText>
+
+            <FadeInText>
+              <p className="text-2xl text-black leading-relaxed text-center font-semibold">
+                40 new donors supporting the next generation of adoption journeys.
+              </p>
+            </FadeInText>
+
+            <FadeInText>
+              <div className="text-center bg-white rounded-2xl shadow-2xl p-8 md:p-12 border-2" style={{ borderColor: '#789051' }}>
+                <p className="text-3xl text-[#a32d84] leading-relaxed mb-8 font-extrabold">
+                  Your Donation Directly Supports:
+                </p>
+                <ul className="text-base md:text-xl text-black leading-relaxed space-y-3">
+                  <li>Adoption counseling and education</li>
+                  <li>Ethical adoption services focused on child wellbeing</li>
+                  <li>Birth parent support and resources</li>
+                  <li>Pre- and post-adoption guidance for families</li>
+                </ul>
+              </div>
+            </FadeInText>
+
+            <FadeInText>
+              <p className="text-2xl text-black leading-relaxed text-center">
+                Every gift, no matter the size, helps turn hope into heart and heart into home.
+              </p>
+            </FadeInText>
+
+
+            <SimpleFadeIn className="text-center mt-60">
+              <h2 className="text-4xl font-bold text-black mb-8">
+                Help Us Build The Next 40 Years
+              </h2>
+              <a
+                href="https://adoptionchoice.app.neoncrm.com/campaigns/40th-anniversary"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-10 py-4 text-xl font-semibold text-white rounded-full transition-all hover:scale-105 hover:shadow-lg"
+                style={{ backgroundColor: '#a32d84' }}
+              >
+                Donate Today
+              </a>
+            </SimpleFadeIn>
+            <div className="animate-bounce" aria-hidden="true">
+              <ChevronDown className="w-8 h-8 mx-auto text-muted-foreground" />
             </div>
-          </FadeInText>
-
-          <FadeInText>
-            <p className="text-2xl text-black leading-relaxed text-center">
-              Every gift, no matter the size, helps turn hope into heart and heart into home.
-            </p>
-          </FadeInText>
+          </div>
+        </section>
 
 
-          <SimpleFadeIn className="text-center mt-60">
-            <h2 className="text-4xl font-bold text-black mb-8">
-              Help Us Build The Next 40 Years
-            </h2>
+        {/* Hero section */}
+
+
+        <section className="h-screen flex items-center justify-center relative">
+          <div className="text-center px-4">
             <a
-              href="https://adoptionchoice.app.neoncrm.com/campaigns/40th-anniversary"
+              href="https://www.adoptionchoiceinc.org"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-10 py-4 text-xl font-semibold text-white rounded-full transition-all hover:scale-105 hover:shadow-lg"
-              style={{ backgroundColor: '#a32d84' }}
+              className="block w-48 lg:w-64 h-auto mx-auto mb-8 hover:opacity-80 transition-opacity"
             >
-              Donate Today
+              <Image
+                src="/logo.svg"
+                alt="Adoption Choice Inc."
+                width={256}
+                height={256}
+                className="w-full h-auto"
+                priority
+              />
             </a>
-          </SimpleFadeIn>
-          <div className="animate-bounce" aria-hidden="true">
-            <ChevronDown className="w-8 h-8 mx-auto text-muted-foreground" />
+            <h1 className="text-5xl lg:text-7xl font-bold mb-4 text-foreground">Our History</h1>
+            <p className="text-xl text-muted-foreground mb-12 max-w-lg mx-auto">
+              40 years of connecting families through adoption in Wisconsin
+            </p>
+            <div className="animate-bounce" aria-hidden="true">
+              <ChevronDown className="w-8 h-8 mx-auto text-muted-foreground" />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
 
-      {/* Hero section */}
 
+        {/* Scroll-driven timeline */}
+        <ScrollTimeline items={items} sectionVh={100} layout="twoCol" railAlign="center" />
 
-      <section className="h-screen flex items-center justify-center relative">
-        <div className="text-center px-4">
-          <a
-            href="https://www.adoptionchoiceinc.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block w-48 lg:w-64 h-auto mx-auto mb-8 hover:opacity-80 transition-opacity"
+        {/* Footer section */}
+        <section className="min-h-screen flex items-center justify-center relative overflow-hidden py-20">
+          {/* Gradient background */}
+          <div
+            className="absolute inset-0 opacity-10"
+            style={{
+              background:
+                'radial-gradient(ellipse at top left, #759845 0%, transparent 50%), radial-gradient(ellipse at bottom right, #672542 0%, transparent 50%)',
+            }}
+          />
+
+          {/* Watermark logo */}
+          <div
+            className="select-none absolute opacity-5 w-150 h-150 pointer-events-none"
+            style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}
           >
-            <Image
-              src="/logo.svg"
-              alt="Adoption Choice Inc."
-              width={256}
-              height={256}
-              className="w-full h-auto"
-              priority
-            />
-          </a>
-          <h1 className="text-5xl lg:text-7xl font-bold mb-4 text-foreground">Our History</h1>
-          <p className="text-xl text-muted-foreground mb-12 max-w-lg mx-auto">
-            40 years of connecting families through adoption in Wisconsin
-          </p>
-          <div className="animate-bounce" aria-hidden="true">
-            <ChevronDown className="w-8 h-8 mx-auto text-muted-foreground" />
-          </div>
-        </div>
-      </section>
-
-
-
-      {/* Scroll-driven timeline */}
-      <ScrollTimeline items={items} sectionVh={100} layout="twoCol" railAlign="center" />
-
-      {/* Footer section */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden py-20">
-        {/* Gradient background */}
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            background:
-              'radial-gradient(ellipse at top left, #759845 0%, transparent 50%), radial-gradient(ellipse at bottom right, #672542 0%, transparent 50%)',
-          }}
-        />
-
-        {/* Watermark logo */}
-        <div
-          className="select-none absolute opacity-5 w-150 h-150 pointer-events-none"
-          style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}
-        >
-          <Image src="/logo-notext.svg" alt="" fill className="object-contain" aria-hidden="true" />
-        </div>
-
-        <div className="select-none text-center px-4 relative z-10 max-w-4xl mx-auto">
-          {/* Main heading */}
-          <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-foreground">
-            Building Families Since 1986
-          </h2>
-          <p className="text-lg text-muted-foreground mb-12 max-w-lg mx-auto">
-            Join us in our mission to connect children with loving families across Wisconsin.
-          </p>
-
-          {/* Impact statistics */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-            <div className="flex flex-col items-center">
-              <span className="text-4xl lg:text-5xl font-bold" style={{ color: '#759845' }}>
-                39+
-              </span>
-              <span className="text-sm text-muted-foreground mt-1">Years of Service</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <span className="text-4xl lg:text-5xl font-bold" style={{ color: '#672542' }}>
-                1000+
-              </span>
-              <span className="text-sm text-muted-foreground mt-1">Families Served</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <span className="text-4xl lg:text-5xl font-bold" style={{ color: '#759845' }}>
-                4
-              </span>
-              <span className="text-sm text-muted-foreground mt-1">Office Locations</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <span className="text-4xl lg:text-5xl font-bold" style={{ color: '#672542' }}>
-                72
-              </span>
-              <span className="text-sm text-muted-foreground mt-1">Wisconsin Counties</span>
-            </div>
+            <Image src="/logo-notext.svg" alt="" fill className="object-contain" aria-hidden="true" />
           </div>
 
-          {/* CTA buttons */}
-          {/* <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="select-none text-center px-4 relative z-10 max-w-4xl mx-auto">
+            {/* Main heading */}
+            <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-foreground">
+              Building Families Since 1986
+            </h2>
+            <p className="text-lg text-muted-foreground mb-12 max-w-lg mx-auto">
+              Join us in our mission to connect children with loving families across Wisconsin.
+            </p>
+
+            {/* Impact statistics */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+              <div className="flex flex-col items-center">
+                <span className="text-4xl lg:text-5xl font-bold" style={{ color: '#759845' }}>
+                  39+
+                </span>
+                <span className="text-sm text-muted-foreground mt-1">Years of Service</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <span className="text-4xl lg:text-5xl font-bold" style={{ color: '#672542' }}>
+                  1000+
+                </span>
+                <span className="text-sm text-muted-foreground mt-1">Families Served</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <span className="text-4xl lg:text-5xl font-bold" style={{ color: '#759845' }}>
+                  4
+                </span>
+                <span className="text-sm text-muted-foreground mt-1">Office Locations</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <span className="text-4xl lg:text-5xl font-bold" style={{ color: '#672542' }}>
+                  72
+                </span>
+                <span className="text-sm text-muted-foreground mt-1">Wisconsin Counties</span>
+              </div>
+            </div>
+
+            {/* CTA buttons */}
+            {/* <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button
               className="px-8 py-3 rounded-full font-medium text-white transition-all hover:scale-105 hover:shadow-lg"
               style={{ backgroundColor: '#672542' }}
@@ -423,8 +423,8 @@ export default function HomePage() {
             </button>
           </div> */}
 
-          {/* Office locations */}
-          {/* <div className="mt-16 pt-8 border-t border-border/50">
+            {/* Office locations */}
+            {/* <div className="mt-16 pt-8 border-t border-border/50">
             <p className="text-sm text-muted-foreground mb-4">Serving families from our offices in:</p>
             <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm font-medium text-foreground">
               <span>Green Bay</span>
@@ -436,8 +436,9 @@ export default function HomePage() {
               <span>Eau Claire</span>
             </div>
           </div> */}
-        </div>
-      </section>
-    </main>
+          </div>
+        </section>
+      </main>
+    </>
   )
 }
