@@ -92,13 +92,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${comfortaa.variable} ${geistMono.variable} antialiased font-comfortaa`}>
-        <Script
-          src="https://cloud.umami.is/script.js"
-          data-website-id="f93372c8-76dd-4d6e-a683-3a735e6e965a"
-          strategy="afterInteractive"
-        />
         {children}
       </body>
+      <Script
+        src="https://cloud.umami.is/script.js"
+        data-website-id="f93372c8-76dd-4d6e-a683-3a735e6e965a"
+        strategy="afterInteractive"
+      />
     </html>
   )
 }
