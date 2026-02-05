@@ -44,7 +44,7 @@ function getServerSnapshot(): boolean {
 
 function subscribeToMediaQuery(query: string) {
   return (callback: () => void) => {
-    if (typeof window === 'undefined') return () => {}
+    if (typeof window === 'undefined') return () => { }
     const mql = window.matchMedia(query)
     mql.addEventListener('change', callback)
     return () => mql.removeEventListener('change', callback)
@@ -198,7 +198,6 @@ function StepCard({ item, index }: StepCardProps) {
       }}
       aria-hidden={false}
     >
-      {item.meta && <span className="text-sm font-medium text-primary mb-2">{item.meta}</span>}
       <h3 className="text-3xl lg:text-4xl font-bold mb-4 text-foreground">{item.title}</h3>
       <p className="text-base lg:text-lg text-muted-foreground leading-relaxed max-w-md">
         {item.description}
@@ -241,7 +240,7 @@ function MediaPanel({ item, index }: MediaPanelProps) {
       {item.media ? (
         item.media
       ) : item.mediaSrc ? (
-        <div className="relative w-full aspect-video">
+        <div className="relative w-[70%] mx-auto aspect-video">
           <Image
             src={item.mediaSrc}
             alt={item.title}
