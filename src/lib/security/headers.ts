@@ -25,7 +25,7 @@ export function generateCSP(): string {
         // Default to self only
         "default-src 'self'",
         // Scripts: self + inline for Next.js + Umami analytics
-        "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cloud.umami.is",
+        "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.umami.is",
         // Styles: self + inline for styled-components/CSS-in-JS
         "style-src 'self' 'unsafe-inline'",
         // Images: self, data URIs, and HTTPS
@@ -33,7 +33,7 @@ export function generateCSP(): string {
         // Fonts: self and data URIs
         "font-src 'self' data:",
         // Connect: self for API calls + Umami analytics
-        "connect-src 'self' https://cloud.umami.is",
+        "connect-src 'self' https://*.umami.is",
         // Frames: none (clickjacking protection)
         "frame-ancestors 'none'",
         // Form actions: self only
