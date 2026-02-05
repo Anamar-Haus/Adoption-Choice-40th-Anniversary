@@ -3,6 +3,7 @@ import { FadeInText } from '@/components/fade-in-text'
 import { SimpleFadeIn } from '@/components/simple-fade-in'
 import { ChevronDown } from 'lucide-react'
 import Image from 'next/image'
+import Script from 'next/script'
 
 const items: TimelineItem[] = [
   {
@@ -189,6 +190,13 @@ const items: TimelineItem[] = [
 export default function HomePage() {
   return (
     <main className="min-h-screen" style={{ backgroundColor: '#f5f5f4' }}>
+      <Script
+        src="https://cloud.umami.is/script.js"
+        data-website-id="f93372c8-76dd-4d6e-a683-3a735e6e965a"
+        strategy="afterInteractive"
+        onLoad={() => alert("hi")}
+        onError={() => alert("bye")}
+      />
       {/* 40th Anniversary Logo Section */}
 
       <section className="w-full max-w-7xl mx-auto px-6 py-16 relative overflow-hidden">

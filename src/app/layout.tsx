@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from 'next'
 import { Comfortaa, Geist_Mono } from 'next/font/google'
-import Script from 'next/script'
 import './globals.css'
 
 const comfortaa = Comfortaa({
@@ -93,11 +92,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${comfortaa.variable} ${geistMono.variable} antialiased font-comfortaa`}>
         {children}
-        <Script
-          src="https://cloud.umami.is/script.js"
-          data-website-id="f93372c8-76dd-4d6e-a683-3a735e6e965a"
-          strategy="beforeInteractive"
-        />
+
       </body>
 
     </html>
